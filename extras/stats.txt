@@ -1,0 +1,630 @@
+NEED TO UPDATE TO ALIGN MORE WITH WHAT STATS SHOW LEAD TO HIGH RESULTS, WHILE ALSO FEEDING ENOUGH SPECIAL CHAR WORDSETS INTO OUR PATTERN LISTS!
+
+JUICIEST MASKS (indented values were top 2 1%'ers in their runs):
+?l?l?l?l?l?l?l?l	
+?l?l?l?l?l?l
+?l?l?l?l?l?l?l
+?d?d?d?d?d?d?d?d
+?d?d?d?d?d?d
+?l?l?l?l?l?l?d?d
+?l?l?l?l?l
+?l?l?l?l?d?d?d?d
+?d?d?d?d?d?d?d
+	?l?l?l?l?l?d?d
+	?l?l?l?l?l?d?d?d
+	?d?d?d?d?d?d?d?d?d?d
+?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l
+?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?l
+?d?d?d?d?d?d?d
+?d?d?d?d?d?d?d?d?d?d
+?d?d?d?d?d?d?d?d
+?l?l?l?l?l?l?d?d
+?l?l?l?l?l?l?l?l?l?l
+?d?d?d?d?d?d
+?d?d?d?d?d?d?d?d?d
+?l?l?l?l?l?d?d
+	?l?l?l?l?l?l?l?d?d
+	?l?l?l?l?l?l?l?l?l?l?l
+	?l?l?l?l?d?d?d?d
+	?l?l?l?l?d?d
+	?l?l?l?l?l?l?l?l?d?d
+?d?d?d?d?d?d?d?d?d?d
+?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l
+?l?l?l?l?l?l?l
+?d?d?d?d?d?d?d?d
+?l?l?l?l?l?l?l?l?l
+?d?d?d?d?d?d
+?l?l?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?d?d
+	?l?l?l?l?d?d?d?d
+	?l?l?l?l?l?d?d?d
+	?l?l?l?l?l?l?l?l?l?l?l
+	 ?d?d?d?d?d?d?d
+?l?l?l?l?l?l
+?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l
+?l?l?l?l?l
+?l?l?l?l
+?l?l?l?l?l?d
+?d?d?d?d
+	?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?l?l?l?l
+	?l?l?l?l?l?l?d?d
+	?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?d?d
+?l?l?l?l?l?l?l?l?d
+?l?l?l?l?l?d?d
+?l?l?l?l?l?d
+?l?l?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?d?d
+?l?l?l?l?d?d
+?l?l?l?l?l?l?l?l?d?d
+	?l?l?l?l?l?d?d?d
+	?l?l?l?l?l?l?d?d?d
+	?l?l?l?l?d?d?d
+
+
+Script Target Masks:
+FINAL CUT:
+MASKS="
+?d?d?d?d
+?d?d?d?d?d?d
+?d?d?d?d?d?d?d
+?d?d?d?d?d?d?d?d
+?d?d?d?d?d?d?d?d?d
+?d?d?d?d?d?d?d?d?d?d
+?d?d?d?d?l?l?l?l
+?d?d?d?l?l?l?l
+?d?d?d?l?l?l?l?l
+?d?d?d?l?l?l?l?l?l
+?d?d?l?l?l?l
+?d?d?l?l?l?l?l
+?d?d?l?l?l?l?l?l
+?d?d?l?l?l?l?l?l?l
+?d?d?l?l?l?l?l?l?l?l
+?d?l?l?l?l
+?d?l?l?l?l?l
+?d?l?l?l?l?l?l
+?d?l?l?l?l?l?l?l
+?d?l?l?l?l?l?l?l?l
+?l?l?l?l
+?l?l?l?l?d
+?l?l?l?l?d?d
+?l?l?l?l?d?d?d
+?l?l?l?l?d?d?d?d
+?l?l?l?l?d?s
+?l?l?l?l?l
+?l?l?l?l?l?d
+?l?l?l?l?l?d?d
+?l?l?l?l?l?d?d?d
+?l?l?l?l?l?l
+?l?l?l?l?l?l?d
+?l?l?l?l?l?l?d?d
+?l?l?l?l?l?l?d?d?d
+?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?d?d
+?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?l?d?d
+?l?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?l?l?l?l?l
+?l?l?l?l?l?l?l?l?l?l?l?l?d
+?l?l?l?l?l?l?l?l?l?l?l?l?s
+?l?l?l?l?l?l?l?l?l?l?l?s
+?l?l?l?l?l?l?l?l?l?l?s
+?l?l?l?l?l?l?l?l?l?s
+?l?l?l?l?l?l?l?l?s
+?l?l?l?l?l?l?l?s
+?l?l?l?l?l?l?s
+?l?l?l?l?l?s
+?l?l?l?l?s
+?s?l?l?l?l
+?s?l?l?l?l?l
+?s?l?l?l?l?l?l
+?s?l?l?l?l?l?l?l
+?s?l?l?l?l?l?l?l?l
+?s?S?l?l?l?l
+?u?d?d?d?d?d?d
+?u?d?d?d?d?d?d?d?d
+?u?l?d?d?d?d?d
+?u?l?d?d?d?d?d?d
+?u?l?d?d?d?d?d?d?d
+?u?l?l?d?d?d?d
+?u?l?l?d?d?d?d?d
+?u?l?l?d?d?d?d?d?d
+?u?l?l?l?l
+?u?l?l?l?l?d
+?u?l?l?l?l?d?d
+?u?l?l?l?l?d?d?d
+?u?l?l?l?l?d?d?d?d
+?u?l?l?l?l?d?s
+?u?l?l?l?l?l
+?u?l?l?l?l?l?d
+?u?l?l?l?l?l?d?d
+?u?l?l?l?l?l?d?d?d
+?u?l?l?l?l?l?d?d?d?d
+?u?l?l?l?l?l?d?s
+?u?l?l?l?l?l?l
+?u?l?l?l?l?l?l?d
+?u?l?l?l?l?l?l?d?d
+?u?l?l?l?l?l?l?d?d?d
+?u?l?l?l?l?l?l?d?d?d?d
+?u?l?l?l?l?l?l?d?s
+?u?l?l?l?l?l?l?s
+?u?l?l?l?l?l?l?s?s
+?u?l?l?l?l?l?s
+?u?l?l?l?l?l?s?s
+?u?l?l?l?l?s
+?u?l?l?l?l?s?s";
+
+STATS:
+==========================================================milw0rm-d!c===============================================================
+./dictstat.py /home/hood3drob1n/fun/hashcat/dic/mil-dic.txt
+[*] Analyzing passwords: /home/hood3drob1n/fun/hashcat/dic/mil-dic.txt
+[+] Analyzing 100% (81131/81131) passwords
+    NOTE: Statistics below is relative to the number of analyzed passwords, not total number of passwords
+
+[*] Line Count Statistics...
+[+]                         8: 36% (29856)
+[+]                         6: 25% (20757)
+[+]                         7: 21% (17255)
+[+]                         5: 05% (4620)
+[+]                         4: 03% (2591)
+[+]                         9: 03% (2459)
+[+]                        10: 02% (2178)
+
+[*] Mask statistics...
+[+]                 allstring: 40% (33102)
+[+]               stringdigit: 22% (18612)
+[+]                  alldigit: 17% (14031)
+[+]                 othermask: 07% (6041)
+[+]         stringdigitstring: 06% (5029)
+[+]               digitstring: 03% (2656)
+[+]          digitstringdigit: 01% (1390)
+[+]             stringspecial: 00% (147)
+[+]       stringspecialstring: 00% (49)
+[+]                allspecial: 00% (39)
+[+]        stringspecialdigit: 00% (22)
+[+]             specialstring: 00% (9)
+[+]      specialstringspecial: 00% (4)
+
+[*] Charset statistics...
+[+]             loweralphanum: 39% (32016)
+[+]                loweralpha: 37% (30648)
+[+]                   numeric: 17% (14031)
+[+]                mixedalpha: 02% (1771)
+[+]             mixedalphanum: 01% (1086)
+[+]                upperalpha: 00% (683)
+[+]             upperalphanum: 00% (519)
+[+]         loweralphaspecial: 00% (135)
+[+]      upperalphaspecialnum: 00% (112)
+[+]         upperalphaspecial: 00% (47)
+[+]                   special: 00% (39)
+[+]         mixedalphaspecial: 00% (33)
+[+]      loweralphaspecialnum: 00% (10)
+[+]      mixedalphaspecialnum: 00% (1)
+
+[*] Advanced Mask statistics...
+[+]          ?l?l?l?l?l?l?l?l: 11% (9242)
+[+]              ?l?l?l?l?l?l: 09% (8108)
+[+]            ?l?l?l?l?l?l?l: 08% (7004)
+[+]          ?d?d?d?d?d?d?d?d: 04% (4016)
+[+]              ?d?d?d?d?d?d: 04% (3836)
+[+]          ?l?l?l?l?l?l?d?d: 03% (2778)
+[+]                ?l?l?l?l?l: 03% (2720)
+[+]          ?l?l?l?l?d?d?d?d: 02% (2165)
+[+]            ?d?d?d?d?d?d?d: 02% (1973)
+[+]            ?l?l?l?l?l?d?d: 01% (1560)
+[+]          ?l?l?l?l?l?d?d?d: 01% (1464)
+[+]      ?d?d?d?d?d?d?d?d?d?d: 01% (1444)
+[+]                  ?l?l?l?l: 01% (1285)
+[+]        ?d?d?d?d?d?d?d?d?d: 01% (1228)
+[+]              ?l?l?l?l?d?d: 01% (1226)
+[+]          ?l?l?l?l?l?l?l?d: 01% (1159)
+[+]            ?l?l?l?d?d?d?d: 01% (993)
+[+]              ?l?l?l?l?l?d: 01% (908)
+[+]            ?l?l?l?l?l?l?d: 01% (868)
+[+]            ?l?l?l?l?d?d?d: 01% (846)
+[+]                  ?d?d?d?d: 01% (844)
+[+]        ?l?l?l?l?l?l?l?l?l: 01% (831)
+[+]              ?l?l?l?d?d?d: 01% (822)
+==========================================================milw0rm-d!c===============================================================
+====================================================================================================================================
+
+====================================================================================================================================
+==========================================================rockyou-d!c===============================================================
+hood3drob1n@HR:~/fun/hashcat/dic/PACK-0.0.2$ ./dictstat.py /home/hood3drob1n/fun/hashcat/demo/prep/rockyou.txt
+[?] Psyco is not available. Install Psyco on 32-bit systems for faster parsing.
+[*] Analyzing passwords: /home/hood3drob1n/fun/hashcat/demo/prep/rockyou.txt
+[+] Analyzing 100% (14344391/14344391) passwords
+    NOTE: Statistics below is relative to the number of analyzed passwords, not total number of passwords
+
+[*] Line Count Statistics...
+[+]                         8: 20% (2966004)
+[+]                         7: 17% (2506264)
+[+]                         9: 15% (2191000)
+[+]                        10: 14% (2013690)
+[+]                         6: 13% (1947858)
+[+]                        11: 06% (865973)
+[+]                        12: 03% (555333)
+[+]                        13: 02% (364169)
+[+]                         5: 01% (259174)
+[+]                        14: 01% (248514)
+[+]                        15: 01% (161181)
+
+[*] Mask statistics...
+[+]               stringdigit: 37% (5339715)
+[+]                 allstring: 28% (4115881)
+[+]                  alldigit: 16% (2346842)
+[+]                 othermask: 05% (731240)
+[+]               digitstring: 04% (663975)
+[+]         stringdigitstring: 03% (450753)
+[+]       stringspecialstring: 01% (204494)
+[+]        stringspecialdigit: 01% (167826)
+[+]             stringspecial: 01% (147874)
+[+]          digitstringdigit: 00% (130518)
+[+]      specialstringspecial: 00% (25100)
+[+]             specialstring: 00% (14410)
+[+]                allspecial: 00% (5763)
+
+[*] Charset statistics...
+[+]             loweralphanum: 42% (6075055)
+[+]                loweralpha: 25% (3726656)
+[+]                   numeric: 16% (2346842)
+[+]      loweralphaspecialnum: 03% (472673)
+[+]             upperalphanum: 02% (407436)
+[+]             mixedalphanum: 02% (382246)
+[+]         loweralphaspecial: 02% (381095)
+[+]                upperalpha: 01% (229893)
+[+]                mixedalpha: 01% (159332)
+[+]      mixedalphaspecialnum: 00% (53240)
+[+]         mixedalphaspecial: 00% (49633)
+[+]      upperalphaspecialnum: 00% (27732)
+[+]         upperalphaspecial: 00% (26795)
+[+]                   special: 00% (5763)
+
+[*] Advanced Mask statistics...
+[+]          ?l?l?l?l?l?l?l?l: 04% (688053)
+[+]              ?l?l?l?l?l?l: 04% (601257)
+[+]            ?l?l?l?l?l?l?l: 04% (585093)
+[+]        ?l?l?l?l?l?l?l?l?l: 03% (516862)
+[+]            ?d?d?d?d?d?d?d: 03% (487437)
+[+]      ?d?d?d?d?d?d?d?d?d?d: 03% (478224)
+[+]          ?d?d?d?d?d?d?d?d: 02% (428306)
+[+]          ?l?l?l?l?l?l?d?d: 02% (420326)
+[+]      ?l?l?l?l?l?l?l?l?l?l: 02% (416961)
+[+]              ?d?d?d?d?d?d: 02% (390546)
+[+]        ?d?d?d?d?d?d?d?d?d: 02% (307540)
+[+]            ?l?l?l?l?l?d?d: 02% (292318)
+[+]        ?l?l?l?l?l?l?l?d?d: 01% (273640)
+[+]    ?l?l?l?l?l?l?l?l?l?l?l: 01% (267742)
+[+]          ?l?l?l?l?d?d?d?d: 01% (235364)
+[+]              ?l?l?l?l?d?d: 01% (215079)
+[+]      ?l?l?l?l?l?l?l?l?d?d: 01% (213117)
+[+]            ?l?l?l?l?l?l?d: 01% (193110)
+[+]          ?l?l?l?l?l?l?l?d: 01% (189855)
+[+]  ?l?l?l?l?l?l?l?l?l?l?l?l: 01% (189360)
+[+]            ?l?l?l?d?d?d?d: 01% (178308)
+[+]        ?l?l?l?l?l?d?d?d?d: 01% (173560)
+[+]      ?l?l?l?l?l?l?d?d?d?d: 01% (160596)
+[+]        ?l?l?l?l?l?l?l?l?d: 01% (160061)
+[+]          ?l?l?l?l?l?d?d?d: 01% (152406)
+==========================================================rockyou-d!c===============================================================
+====================================================================================================================================
+
+====================================================================================================================================
+==========================================================books4u-d!c===============================================================
+hood3drob1n@HR:~/fun/hashcat/dic/PACK-0.0.2$ ./dictstat.py /home/hood3drob1n/Desktop/books4u_cracked/books4u-1daycrack.clean 
+[?] Psyco is not available. Install Psyco on 32-bit systems for faster parsing.
+[*] Analyzing passwords: /home/hood3drob1n/Desktop/books4u_cracked/books4u-1daycrack.clean
+[+] Analyzing 100% (94080/94080) passwords
+    NOTE: Statistics below is relative to the number of analyzed passwords, not total number of passwords
+
+[*] Line Count Statistics...
+[+]                         8: 26% (25166)
+[+]                        10: 21% (20092)
+[+]                         6: 17% (16246)
+[+]                         7: 12% (11966)
+[+]                         9: 11% (11196)
+[+]                        11: 03% (3210)
+[+]                        12: 02% (1910)
+[+]                         5: 01% (1800)
+[+]                         4: 01% (1088)
+
+[*] Mask statistics...
+[+]                 allstring: 43% (40796)
+[+]                  alldigit: 25% (23910)
+[+]               stringdigit: 23% (22136)
+[+]                 othermask: 02% (2222)
+[+]               digitstring: 01% (1230)
+[+]        stringspecialdigit: 01% (1194)
+[+]         stringdigitstring: 01% (982)
+[+]          digitstringdigit: 00% (806)
+[+]       stringspecialstring: 00% (374)
+[+]             stringspecial: 00% (260)
+[+]             specialstring: 00% (70)
+[+]      specialstringspecial: 00% (56)
+[+]                allspecial: 00% (44)
+
+[*] Charset statistics...
+[+]                loweralpha: 41% (38734)
+[+]                   numeric: 25% (23910)
+[+]             loweralphanum: 24% (22984)
+[+]             mixedalphanum: 03% (2886)
+[+]      loweralphaspecialnum: 01% (1524)
+[+]                upperalpha: 01% (1290)
+[+]                mixedalpha: 00% (772)
+[+]         loweralphaspecial: 00% (744)
+[+]             upperalphanum: 00% (700)
+[+]      mixedalphaspecialnum: 00% (354)
+[+]      upperalphaspecialnum: 00% (50)
+[+]         mixedalphaspecial: 00% (46)
+[+]                   special: 00% (44)
+[+]         upperalphaspecial: 00% (42)
+
+[*] Advanced Mask statistics...
+[+]      ?d?d?d?d?d?d?d?d?d?d: 12% (11820)
+[+]          ?l?l?l?l?l?l?l?l: 11% (10828)
+[+]              ?l?l?l?l?l?l: 09% (8524)
+[+]            ?l?l?l?l?l?l?l: 06% (6258)
+[+]          ?d?d?d?d?d?d?d?d: 05% (5040)
+[+]        ?l?l?l?l?l?l?l?l?l: 05% (4782)
+[+]              ?d?d?d?d?d?d: 04% (4154)
+[+]      ?l?l?l?l?l?l?l?l?l?l: 03% (3082)
+[+]          ?l?l?l?l?l?l?d?d: 02% (2132)
+[+]          ?l?l?l?l?d?d?d?d: 01% (1802)
+[+]          ?l?l?l?l?l?d?d?d: 01% (1736)
+[+]    ?l?l?l?l?l?l?l?l?l?l?l: 01% (1494)
+[+]            ?d?d?d?d?d?d?d: 01% (1484)
+[+]                ?l?l?l?l?l: 01% (1402)
+[+]        ?l?l?l?l?l?l?d?d?d: 01% (1324)
+[+]        ?l?l?l?l?l?d?d?d?d: 01% (1238)
+[+]  ?l?l?l?l?l?l?l?l?l?l?l?l: 01% (950)
+==========================================================books4u-d!c===============================================================
+====================================================================================================================================
+
+====================================================================================================================================
+==========================================================10K_Most_Common===========================================================
+hood3drob1n@HR:~/fun/hashcat/dic/PACK-0.0.2$ ./dictstat.py /home/hood3drob1n/fun/hashcat/dic/10k_most_common.txt 
+[?] Psyco is not available. Install Psyco on 32-bit systems for faster parsing.
+[*] Analyzing passwords: /home/hood3drob1n/fun/hashcat/dic/10k_most_common.txt
+[+] Analyzing 100% (10000/10000) passwords
+    NOTE: Statistics below is relative to the number of analyzed passwords, not total number of passwords
+
+[*] Line Count Statistics...
+[+]                         6: 35% (3547)
+[+]                         7: 20% (2055)
+[+]                         8: 19% (1931)
+[+]                         5: 11% (1172)
+[+]                         4: 11% (1140)
+[+]                         9: 01% (104)
+
+[*] Mask statistics...
+[+]                 allstring: 83% (8308)
+[+]               stringdigit: 09% (907)
+[+]                  alldigit: 05% (555)
+[+]         stringdigitstring: 00% (82)
+[+]               digitstring: 00% (75)
+[+]                 othermask: 00% (54)
+[+]          digitstringdigit: 00% (6)
+[+]                allspecial: 00% (5)
+[+]       stringspecialstring: 00% (4)
+[+]             stringspecial: 00% (2)
+[+]      specialstringspecial: 00% (1)
+[+]             specialstring: 00% (1)
+
+[*] Charset statistics...
+[+]                loweralpha: 83% (8308)
+[+]             loweralphanum: 11% (1121)
+[+]                   numeric: 05% (555)
+[+]         loweralphaspecial: 00% (9)
+[+]                   special: 00% (5)
+[+]      loweralphaspecialnum: 00% (2)
+
+[*] Advanced Mask statistics...
+[+]              ?l?l?l?l?l?l: 28% (2865)
+[+]            ?l?l?l?l?l?l?l: 17% (1789)
+[+]          ?l?l?l?l?l?l?l?l: 15% (1562)
+[+]                ?l?l?l?l?l: 11% (1123)
+[+]                  ?l?l?l?l: 08% (846)
+[+]              ?l?l?l?l?l?d: 03% (329)
+[+]                  ?d?d?d?d: 02% (285)
+[+]            ?l?l?l?l?l?l?d: 01% (184)
+[+]              ?d?d?d?d?d?d: 01% (179)
+[+]          ?l?l?l?l?l?l?l?d: 01% (173)
+==========================================================10K_Most_Common===========================================================
+====================================================================================================================================
+
+====================================================================================================================================
+============================================================500-worst===============================================================
+hood3drob1n@HR:~/fun/hashcat/dic/PACK-0.0.2$ ./dictstat.py /home/hood3drob1n/fun/hashcat/dic/500-worst-passwords.txt 
+[?] Psyco is not available. Install Psyco on 32-bit systems for faster parsing.
+[*] Analyzing passwords: /home/hood3drob1n/fun/hashcat/dic/500-worst-passwords.txt
+[+] Analyzing 100% (516/516) passwords
+    NOTE: Statistics below is relative to the number of analyzed passwords, not total number of passwords
+
+[*] Line Count Statistics...
+[+]                         6: 46% (240)
+[+]                         7: 18% (97)
+[+]                         5: 12% (65)
+[+]                         4: 11% (59)
+[+]                         8: 09% (48)
+
+[*] Mask statistics...
+[+]                 allstring: 88% (457)
+[+]                  alldigit: 08% (44)
+[+]               stringdigit: 02% (12)
+[+]                 othermask: 00% (2)
+[+]       stringspecialstring: 00% (1)
+
+[*] Charset statistics...
+[+]                loweralpha: 88% (457)
+[+]                   numeric: 08% (44)
+[+]             loweralphanum: 02% (13)
+[+]      mixedalphaspecialnum: 00% (1)
+[+]         loweralphaspecial: 00% (1)
+
+[*] Advanced Mask statistics...
+[+]              ?l?l?l?l?l?l: 42% (220)
+[+]            ?l?l?l?l?l?l?l: 17% (90)
+[+]                ?l?l?l?l?l: 12% (62)
+[+]                  ?l?l?l?l: 08% (43)
+[+]          ?l?l?l?l?l?l?l?l: 07% (40)
+[+]                  ?d?d?d?d: 03% (16)
+[+]              ?d?d?d?d?d?d: 03% (16)
+============================================================500-worst===============================================================
+====================================================================================================================================
+
+====================================================================================================================================
+============================================================linkedIn================================================================
+hood3drob1n@HR:~/fun/hashcat/dic/PACK-0.0.2$ ./dictstat.py /home/hood3drob1n/fun/hashcat/dic/linkedIn.txt 
+[?] Psyco is not available. Install Psyco on 32-bit systems for faster parsing.
+[*] Analyzing passwords: /home/hood3drob1n/fun/hashcat/dic/linkedIn.txt
+[+] Analyzing 100% (2017843/2017843) passwords
+    NOTE: Statistics below is relative to the number of analyzed passwords, not total number of passwords
+
+[*] Line Count Statistics...
+[+]                         8: 32% (655657)
+[+]                         9: 21% (431016)
+[+]                        10: 16% (334058)
+[+]                        11: 09% (197346)
+[+]                        12: 06% (129305)
+[+]                         7: 04% (89492)
+[+]                        13: 03% (72004)
+[+]                        14: 02% (43357)
+[+]                         6: 01% (31163)
+[+]                        15: 01% (21955)
+
+[*] Mask statistics...
+[+]               stringdigit: 26% (537073)
+[+]                 othermask: 22% (449823)
+[+]                 allstring: 20% (417967)
+[+]         stringdigitstring: 17% (347558)
+[+]        stringspecialdigit: 04% (97415)
+[+]               digitstring: 03% (64538)
+[+]       stringspecialstring: 02% (43144)
+[+]          digitstringdigit: 01% (39207)
+[+]             stringspecial: 00% (13805)
+[+]                  alldigit: 00% (3148)
+[+]             specialstring: 00% (2275)
+[+]      specialstringspecial: 00% (1415)
+[+]                allspecial: 00% (475)
+
+[*] Charset statistics...
+[+]             loweralphanum: 36% (727084)
+[+]             mixedalphanum: 22% (459662)
+[+]                loweralpha: 16% (341102)
+[+]      mixedalphaspecialnum: 07% (153565)
+[+]      loweralphaspecialnum: 07% (149960)
+[+]                mixedalpha: 03% (66948)
+[+]         loweralphaspecial: 02% (43988)
+[+]             upperalphanum: 01% (28600)
+[+]         mixedalphaspecial: 01% (22147)
+[+]                upperalpha: 00% (9917)
+[+]      upperalphaspecialnum: 00% (9575)
+[+]                   numeric: 00% (3148)
+[+]         upperalphaspecial: 00% (1672)
+[+]                   special: 00% (475)
+
+[*] Advanced Mask statistics...
+[+]      ?l?l?l?l?l?l?l?l?l?l: 03% (77410)
+[+]        ?l?l?l?l?l?l?l?l?l: 03% (67139)
+[+]    ?l?l?l?l?l?l?l?l?l?l?l: 02% (58793)
+[+]  ?l?l?l?l?l?l?l?l?l?l?l?l: 02% (41200)
+[+]          ?l?l?l?l?l?l?l?l: 01% (40100)
+[+]          ?l?l?l?l?l?l?d?d: 01% (37246)
+[+]          ?l?l?l?l?l?l?l?d: 01% (27151)
+[+] ?l?l?l?l?l?l?l?l?l?l?l?l?l: 01% (24475)
+[+]        ?l?l?l?l?l?l?l?d?d: 01% (22188)
+[+]      ?l?l?l?l?l?l?l?l?d?d: 01% (22178)
+[+]          ?l?l?l?d?d?l?l?l: 01% (21493)
+============================================================linkedIn================================================================
+====================================================================================================================================
+
+====================================================================================================================================
+============================================================MySpace=================================================================
+hood3drob1n@HR:~/fun/hashcat/dic/PACK-0.0.2$ ./dictstat.py /home/hood3drob1n/fun/hashcat/dic/myspace.txt
+[?] Psyco is not available. Install Psyco on 32-bit systems for faster parsing.
+[*] Analyzing passwords: /home/hood3drob1n/fun/hashcat/dic/myspace.txt
+[+] Analyzing 100% (37144/37144) passwords
+    NOTE: Statistics below is relative to the number of analyzed passwords, not total number of passwords
+
+[*] Line Count Statistics...
+[+]                         8: 22% (8494)
+[+]                         7: 22% (8389)
+[+]                         9: 17% (6426)
+[+]                         6: 15% (5653)
+[+]                        10: 14% (5317)
+[+]                        11: 03% (1136)
+[+]                        12: 01% (456)
+
+[*] Mask statistics...
+[+]               stringdigit: 68% (25502)
+[+]                 allstring: 06% (2553)
+[+]               digitstring: 06% (2336)
+[+]             stringspecial: 05% (2036)
+[+]                 othermask: 04% (1628)
+[+]         stringdigitstring: 03% (1452)
+[+]       stringspecialstring: 01% (603)
+[+]        stringspecialdigit: 00% (300)
+[+]                  alldigit: 00% (267)
+[+]          digitstringdigit: 00% (257)
+[+]             specialstring: 00% (99)
+[+]      specialstringspecial: 00% (98)
+[+]                allspecial: 00% (13)
+
+[*] Charset statistics...
+[+]             loweralphanum: 75% (28201)
+[+]         loweralphaspecial: 07% (2828)
+[+]                loweralpha: 06% (2402)
+[+]             upperalphanum: 02% (1065)
+[+]      loweralphaspecialnum: 02% (912)
+[+]             mixedalphanum: 02% (883)
+[+]                   numeric: 00% (267)
+[+]         mixedalphaspecial: 00% (168)
+[+]         upperalphaspecial: 00% (120)
+[+]      mixedalphaspecialnum: 00% (95)
+[+]                upperalpha: 00% (91)
+[+]                mixedalpha: 00% (60)
+[+]      upperalphaspecialnum: 00% (39)
+[+]                   special: 00% (13)
+
+[*] Advanced Mask statistics...
+[+]            ?l?l?l?l?l?l?d: 07% (2725)
+[+]          ?l?l?l?l?l?l?l?d: 06% (2239)
+[+]          ?l?l?l?l?l?l?d?d: 05% (2195)
+[+]        ?l?l?l?l?l?l?l?l?d: 05% (1933)
+[+]            ?l?l?l?l?l?d?d: 04% (1630)
+[+]              ?l?l?l?l?l?d: 03% (1484)
+[+]      ?l?l?l?l?l?l?l?l?l?d: 03% (1477)
+[+]        ?l?l?l?l?l?l?l?d?d: 03% (1410)
+[+]              ?l?l?l?l?d?d: 03% (1325)
+[+]      ?l?l?l?l?l?l?l?l?d?d: 03% (1197)
+[+]          ?l?l?l?l?l?d?d?d: 01% (550)
+[+]        ?l?l?l?l?l?l?d?d?d: 01% (546)
+[+]              ?l?l?l?l?l?l: 01% (530)
+[+]            ?l?l?l?l?d?d?d: 01% (518)
+[+]            ?l?l?l?l?l?l?s: 01% (503)
+[+]          ?l?l?l?l?d?d?d?d: 01% (443)
+[+]            ?l?l?l?l?l?l?l: 01% (427)
+[+]              ?l?l?l?d?d?d: 01% (413)
+[+]          ?l?l?l?l?l?l?l?l: 01% (407)
+[+]          ?l?l?l?l?l?l?l?s: 01% (383)
+[+]            ?l?l?l?d?d?d?d: 01% (378)
+[+]      ?l?l?l?l?l?l?d?d?d?d: 01% (377)
+============================================================MySpace=================================================================
+====================================================================================================================================
