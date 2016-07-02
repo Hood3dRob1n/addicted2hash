@@ -9,23 +9,32 @@
 # Run script with no arguments to see help menu (or -h or --help)
 #
 
-##########################START-CONFIGURATION#####################################################
-#Path to oclHashcat-plus32/64.bin
-OCLPLUS="/home/hood3drob1n/fun/hashcat/hashcat-gui-0.5.1/oclHashcat-plus/cudaHashcat-plus32.bin" 
+# Modified by Albert Veli 2016 to run with new hashcat
+# instead of oclHashcat-plus and to work on OS X
 
-#Path to expander.bin tool from hashcat utils package
-EXPANDER="/home/hood3drob1n/fun/hashcat/dic/wordTools/hashcat-utils-0.9/expander.bin" 
+##########################################=>CONFIGURATION<=############################################
+# Cut Length For Cleaning cracked.out files => 34=MD5(0),40=IPB2/MyBB(2811),
+ccc="34-" #MD5
 
-#tmp folder
-JUNK=/tmp 
+#Path to the appropriate 32/64 oclHashcat-plus bin file
+HASHCAT="/usr/local/bin/hashcat.app"
 
-# Cut Length for trimming crcaked passes off cracked log file, some examples: 34=MD5(0),40=IPB2/MyBB(2811),
-ccc="34-" #MD5 default
-############################END-CONFIGURATION#####################################################
+#Path to the Expander.bin tool
+EXPANDER="$HOME/autocrack/hashcat-utils/src/expander.bin"
+
+# hashcat workload profile.
+#   | Performance | Runtime | Power Consumption | Desktop Impact
+# ==+=============+=========+===================+=================
+# 1 | Low         |   2 ms  | Low               | Minimal
+# 2 | Default     |  12 ms  | Economic          | Noticeable
+# 3 | High        |  96 ms  | High              | Unresponsive
+# 4 | Nightmare   | 480 ms  | Insane            | Headless
+WORKLOAD="-w 2"
+##########################################=>CONFIGURATION<=############################################
 
 #Let the magic start....
-HTMP1=$(mktemp -p "$JUNK" -t fooooocrack1.tmp.XXX)
-HTMP2=$(mktemp -p "$JUNK" -t fooooocrack2.tmp.XXX)
+HTMP1=$(mktemp -t fooooocrack1.tmp.XXX)
+HTMP2=$(mktemp -t fooooocrack2.tmp.XXX)
 
 #First a simple Bashtrap function to handle interupt (CTRL+C)
 trap bashtrap INT
@@ -36,7 +45,7 @@ function bashtrap(){
 	echo 'CTRL+C has been detected!.....shutting down now' | grep --color '.....shutting down now'
 	rm -f "$HTMP1" 2> /dev/null
 	rm -f "$HTMP2" 2> /dev/null
-	exit 666;
+	exit 666
 }
 #End bashtrap()
 
@@ -75,8 +84,11 @@ function usage_info(){
 	echo "EX: $0 -H /home/HR/hacked/MD5hashlist.lst -T 100 -W /home/hood3drob1n/passwords/rockyou.txt.sha1" | grep --color 'EX'
 	echo
 	echo "Available Hash Types:" | grep --color 'Available Hash Types'
-	echo "	    0 = MD5 (Default if -T not provided)
-	   11 = Joomla
+	echo '	    0 = MD5 (Default if -T not provided)
+	   11 = Joomla < 2.5.18
+	   12 = PostgreSQL
+	   21 = osCommerce, xt:Commerce
+	   23 = Skype
 	   21 = osCommerce, xt:Commerce
 	  100 = SHA1
 	  101 = nsldap, SHA-1(Base64), Netscape LDAP SHA
@@ -84,25 +96,130 @@ function usage_info(){
 	  112 = Oracle 11g
 	  121 = SMF > v1.1
 	  122 = OSX v10.4, v10.5, v10.6
+	  124 = Django (SHA-1)
+	  125 = ArubaOS
 	  131 = MSSQL(2000)
 	  132 = MSSQL(2005)
+	  133 = PeopleSoft
+	  141 = EPiServer 6.x < v4
+	  200 = MySQL323
 	  300 = MySQL > v4.1
-	  400 = phpass, MD5(Wordpress), MD5(phpBB3)
-	  500 = md5crypt, MD5(Unix), FreeBSD MD5, Cisco-IOS MD5
+	  400 = phpass, MD5(Wordpress), MD5(phpBB3), Joomla > 2.5.18
+	  500 = md5crypt $1$, MD5(Unix), FreeBSD MD5, Cisco-IOS $1$
+	  501 = Juniper IVE
 	  900 = MD4
 	 1000 = NTLM
 	 1100 = Domain Cached Credentials, mscash
 	 1400 = SHA256
+	 1421 = hMailServer
+	 1441 = EPiServer 6.x > v4
 	 1500 = descrypt, DES(Unix), Traditional DES
-	 1600 = md5apr1, MD5(APR), Apache MD5
+	 1600 = md5apr1, MD5(APR), Apache $apr1$
+	 1700 = SHA512
+	 1722 = OSX v10.7
+	 1731 = MSSQL(2012), MSSQL(2014)
+	 1800 = sha512crypt $6$, SHA512(Unix)
 	 2100 = Domain Cached Credentials2, mscash2
 	 2400 = Cisco-PIX MD5
+	 2410 = Cisco-ASA
 	 2500 = WPA/WPA2
 	 2611 = vBulletin < v3.8.5
+	 2612 = PHPS
 	 2711 = vBulletin > v3.8.5
-	 2811 = IPB 2.0, MyBB1.2"
+	 2811 = IPB 2.0, MyBB1.2
+	 3000 = LM
+	 3100 = Oracle H: Type (Oracle 7+)
+	 3200 = bcrypt $2*$, Blowfish(Unix)
+	 3711 = Mediawiki B type
+	 4300 = md5(strtoupper(md5($pass)))
+	 4400 = md5(sha1($pass))
+	 4500 = sha1(sha1($pass))
+	 4700 = sha1(md5($pass))
+	 4800 = iSCSI CHAP authentication, MD5(Chap)
+	 5000 = SHA-3(Keccak)
+	 5100 = Half MD5
+	 5200 = Password Safe v3
+	 5300 = IKE-PSK MD5
+	 5400 = IKE-PSK SHA1
+	 5500 = NetNTLMv1
+	 5600 = NetNTLMv2
+	 5700 = Cisco-IOS $4$
+	 5800 = Android PIN
+	 6000 = RipeMD160
+	 6100 = Whirlpool
+	 6300 = AIX {smd5}
+	 6400 = AIX {ssha256}
+	 6500 = AIX {ssha512}
+	 6600 = 1Password, agilekeychain
+	 6700 = AIX {ssha1}
+	 6800 = Lastpass + Lastpass sniffed
+	 6900 = GOST R 34.11-94
+	 7100 = OSX v10.8, OSX v10.9, OSX v10.10
+	 7200 = GRUB 2
+	 7300 = IPMI2 RAKP HMAC-SHA1
+	 7400 = sha256crypt $5$, SHA256(Unix)
+	 7500 = Kerberos 5 AS-REQ Pre-Auth etype 23
+	 7600 = Redmine
+	 7700 = SAP CODVN B (BCODE)
+	 7800 = SAP CODVN F/G (PASSCODE)
+	 7900 = Drupal7
+	 8000 = Sybase ASE
+	 8100 = Citrix Netscaler
+	 8200 = 1Password, cloudkeychain
+	 8300 = DNSSEC (NSEC3)
+	 8400 = WBB3 (Woltlab Burning Board)
+	 8500 = RACF
+	 8600 = Lotus Notes/Domino 5
+	 8700 = Lotus Notes/Domino 6
+	 8800 = Android FDE < v4.3
+	 8900 = scrypt
+	 9000 = Password Safe v2
+	 9100 = Lotus Notes/Domino 8
+	 9200 = Cisco-IOS $8$
+	 9300 = Cisco-IOS $9$
+	 9400 = MS Office 2007
+	 9500 = MS Office 2010
+	 9600 = MS Office 2013
+	 9900 = Radmin2
+	10000 = Django (PBKDF2-SHA256)
+	10100 = SipHash
+	10200 = Cram MD5
+	10400 = PDF 1.1 - 1.3 (Acrobat 2 - 4)
+	10500 = PDF 1.4 - 1.6 (Acrobat 5 - 8)
+	10600 = PDF 1.7 Level 3 (Acrobat 9)
+	10700 = PDF 1.7 Level 8 (Acrobat 10 - 11)
+	10800 = SHA-384
+	10900 = PBKDF2-HMAC-SHA256
+	11000 = PrestaShop
+	11100 = PostgreSQL CRAM (MD5)
+	11200 = MySQL CRAM (SHA1)
+	11300 = Bitcoin/Litecoin wallet.dat
+	11400 = SIP digest authentication (MD5)
+	11500 = CRC32
+	11600 = 7-Zip
+	11700 = GOST R 34.11-2012 (Streebog) 256-bit
+	11800 = GOST R 34.11-2012 (Streebog) 512-bit
+	11900 = PBKDF2-HMAC-MD5
+	12000 = PBKDF2-HMAC-SHA1
+	12100 = PBKDF2-HMAC-SHA512
+	12200 = eCryptfs
+	12300 = Oracle T: Type (Oracle 12+)
+	12400 = BSDiCrypt, Extended DES
+	12500 = RAR3-hp
+	12600 = ColdFusion 10+
+	12700 = Blockchain, My Wallet
+	12800 = MS-AzureSync PBKDF2-HMAC-SHA256
+	12900 = Android FDE (Samsung DEK)
+	13000 = RAR5
+	13100 = Kerberos 5 TGS-REP etype 23
+	13200 = AxCrypt
+	13300 = AxCrypt in memory SHA1
+	13400 = Keepass 1 (AES/Twofish), Keepass 2 (AES)
+	13500 = PeopleSoft Token
+	13600 = WinZip
+	13800 = Windows 8+ phone PIN/Password'
 	echo
-	exit;
+	exit
 }
 
 function expander(){
@@ -112,29 +229,32 @@ function expander(){
 function looper(){
 	clear
 	banner
-	echo 
-	echo "Base pattern completed, commencing true attack - will run till you stop it........." | grep --color -E 'Base pattern completed||commencing true attack||will run till you stop'
+	echo
+	echo "Base pattern completed, commencing true attack - will run till you stop it........." | grep --color 'Base pattern completed, commencing true attack - will run till you stop'
 	echo "Just hit 'CTRL+C' to safely stop it......."
 	echo
 	count=0
-	while [ $count -lt 100 ]; 
+	if ! [ -e auto-pattern.cracked ]; then
+		touch auto-pattern.cracked
+	fi
+	while [ $count -lt 100 ];
 	do
 		echo "Cracking Round: $(($count +1))" | grep --color 'Cracking Round' #Start of loop
-		BASE1=$(wc -l "$HLIST" | cut -d' ' -f1);
-		"$OCLPLUS" -n 80 --attack-mode 1 --hash-type $method --remove --outfile auto-pattern.cracked "$HLIST" auto-pattern.lst auto-pattern.lst
-		CURRENT=$(wc -l "$HLIST" | cut -d' ' -f1);
-		cat auto-pattern.cracked >> auto.out	
+		BASE1=$(wc -l "$HLIST" | sed 's/^[ ]*//' | cut -d' ' -f1)
+		"$HASHCAT" $WORKLOAD --attack-mode 1 --hash-type $method --remove --outfile auto-pattern.cracked "$HLIST" auto-pattern.lst auto-pattern.lst
+		CURRENT=$(wc -l "$HLIST" | sed 's/^[ ]*//' | cut -d' ' -f1)
+		cat auto-pattern.cracked >> auto.out
 		cat auto-pattern.cracked | cut -b "$ccc" >> auto.dict 2> /dev/null
 		rm -f auto-pattern.cracked 2> /dev/null
 		expander
 		echo
-		echo "Cracked This Round: $(($BASE1-$CURRENT))" | grep --color 'Cracked This Round'
-		echo "Total Cracked: $(($BASE-$CURRENT))" | grep --color 'Total Cracked';
+		echo "Cracked This Round: $(($BASE1 - $CURRENT))" | grep --color 'Cracked This Round'
+		echo "Total Cracked: $(($BASE - $CURRENT))" | grep --color 'Total Cracked'
 		echo "On to the next round...." | grep --color 'On to the next round'
 		echo
 		sleep 2
 		wait
-		count=$((count +1)) 
+		count=$((count +1))
 	done
 }
 
@@ -143,12 +263,12 @@ function base_mask(){
 	echo
 	echo "Making first passes to build base pattern list, hang tight........." | grep --color -E 'Making first passes to build base pattern list||hang tight'
 	echo
-	"$OCLPLUS" -n 80 --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?
-	"$OCLPLUS" -n 80 --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1
-	"$OCLPLUS" -n 80 --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1?1
-	"$OCLPLUS" -n 80 --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1?1?1
-	"$OCLPLUS" -n 80 --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1?1?1?1
-	"$OCLPLUS" -n 80 --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1?1?1?1?1
+	"$HASHCAT" $WORKLOAD --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?
+	"$HASHCAT" $WORKLOAD --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1
+	"$HASHCAT" $WORKLOAD --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1?1
+	"$HASHCAT" $WORKLOAD --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1?1?1
+	"$HASHCAT" $WORKLOAD --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1?1?1?1
+	"$HASHCAT" $WORKLOAD --attack-mode 3 --hash-type $method --custom-charset1 ?l?u?d?s --remove --outfile "$HTMP1" "$BHLIST" ?1?1?1?1?1?1
 	cat "$HTMP1" | cut -b "$ccc" >> "$HTMP2" 2> /dev/null
 	if [ -e auto-pattern.lst ]; then
 		mv auto-pattern.lst auto-pattern_`date +%Y%m%d%H`.lst.bk
@@ -165,7 +285,7 @@ function skip_mask(){
 	if [ -e auto-pattern.lst ]; then
 		mv auto-pattern.lst auto-pattern_`date +%Y%m%d%H`.lst.bk
 	fi
-	echo "Skipping mask attack since you provided your own base file, just some quick prep work........." | grep --color -E 'Skipping mask attack since you provided your own base file||just some quick prep work'
+	echo "Skipping mask attack since you provided your own base file, just some quick prep work........." | grep --color 'Skipping mask attack since you provided your own base file, just some quick prep work'
 	echo
 	cat "$base_list" | "$EXPANDER" | sort -u > auto-pattern.lst
 	echo "" >  "$HTMP1" 2> /dev/null & echo "" >  "$HTMP2" 2> /dev/null
@@ -191,7 +311,7 @@ do
 		*) echo "Unknown Parameters provided!" | grep --color 'Unknown Parameters provided'; usage_info;; #WTF?
 	esac;
 done
-BASE=$(wc -l "$HLIST" | cut -d' ' -f1)
+BASE=$(wc -l "$HLIST" | sed 's/^[ ]*//' | cut -d ' ' -f1)
 if [ -e pattern.lst ]; then
 	cp pattern.lst pattern_`date +%Y%m%d%H`.lst.bk
 fi
